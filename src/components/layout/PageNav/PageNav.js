@@ -1,14 +1,16 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 // styles
 import clsx from 'clsx';
-import styles from './NotFound.module.scss';
+import styles from './PageNav.module.scss';
 
 // components
 
 // material-ui
+import Button from '@material-ui/core/Button';
 
 // redux
 // import { connect } from 'react-redux';
@@ -17,8 +19,11 @@ import styles from './NotFound.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>NotFound</h2>
-    {children}
+    <nav>
+      <Button className={styles.link} color="inherit" component={NavLink} exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</Button>
+      <Button className={styles.link} color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/musicians`} activeClassName='active'>Musicians</Button>
+      <Button className={styles.link} color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/order`} activeClassName='active'>Order</Button>
+    </nav>
   </div>
 );
 
@@ -38,7 +43,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as NotFound,
-  // Container as NotFound,
-  Component as NotFoundComponent,
+  Component as PageNav,
+  // Container as PageNav,
+  Component as PageNavComponent,
 };

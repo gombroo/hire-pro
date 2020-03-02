@@ -1,12 +1,18 @@
+// react
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// styles
 import clsx from 'clsx';
+import styles from './{{pascalCase name}}.module.scss';
 
+// components
+
+// material-ui
+
+// redux
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
-import styles from './{{pascalCase name}}.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>

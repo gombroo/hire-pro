@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // styles
 import clsx from 'clsx';
-import styles from './Homepage.module.scss';
+import styles from './Order.module.scss';
 
 // components
 
@@ -14,14 +14,10 @@ import styles from './Homepage.module.scss';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-
-const Component = ({ className, children }) => (
+const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Homepage</h2>
+    <h2>Order</h2>
     {children}
-    {/* slider */}
-    {/* featured musicians */}
-    {/* boxes with genres  */}
   </div>
 );
 
@@ -41,7 +37,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as Homepage,
-  // Container as Homepage,
-  Component as HomepageComponent,
+  Component as Order,
+  // Container as Order,
+  Component as OrderComponent,
 };
