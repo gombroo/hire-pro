@@ -7,6 +7,9 @@ import clsx from 'clsx';
 import styles from './Homepage.module.scss';
 
 // components
+import { FeaturedBoxes } from '../../features/FeaturedBoxes/FeaturedBoxes';
+import Instruments from '../../features/Instruments/Instruments';
+import { Hero } from '../../features/Hero/Hero';
 
 // material-ui
 
@@ -17,11 +20,9 @@ import styles from './Homepage.module.scss';
 
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Homepage</h2>
-    {children}
-    {/* slider */}
-    {/* featured musicians */}
-    {/* boxes with genres  */}
+    <Hero />
+    <FeaturedBoxes />
+    <Instruments />
   </div>
 );
 

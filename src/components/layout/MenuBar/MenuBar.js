@@ -1,10 +1,11 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link as RouterLink } from 'react-router-dom';
 
 // styles
-// import clsx from 'clsx';
-// import styles from './MenuBar.module.scss';
+import clsx from 'clsx';
+import styles from './MenuBar.module.scss';
 
 // components
 import { PageNav } from '../PageNav/PageNav';
@@ -14,9 +15,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
 // redux
 // import { connect } from 'react-redux';
@@ -35,20 +38,28 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = () => {
+const Component = ({className, children}) => {
   const classes = useStyles();
 
   return(
-    <div className={classes.root}>
-      <AppBar position="static">
+    <div className={clsx(className, styles.root)}>
+      <AppBar disableElevation position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+          <RouterLink to="/" color="inherit">
+            <Icon edge="start" className={classes.menuButton} color="inherit">
+              <HeadsetOutlinedIcon />
+            </Icon>
+          </RouterLink>
           <Typography variant="h6" className={classes.title}>
-            Hire Musician
+            Hire Music Pro
           </Typography>
           <PageNav />
+
+          {/* <TopBar /> */}
+
+          <IconButton aria-label="search" color="inherit" >
+            <SearchIcon />
+          </IconButton>
           <IconButton edge="end" color="inherit">
             <AccountCircle />
           </IconButton>

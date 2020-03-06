@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MusiciansComponent } from './Musicians';
+import { ProListComponent } from './ProList';
 
-describe('Component Musicians', () => {
+describe('Component ProList', () => {
   it('should render without crashing', () => {
-    const component = shallow(<MusiciansComponent />);
+    const component = shallow(<ProListComponent />);
     expect(component).toBeTruthy();
   });
 });

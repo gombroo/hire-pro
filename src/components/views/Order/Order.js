@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import styles from './Order.module.scss';
 
 // components
+import Checkout from '../../features/Chceckout/Checkout';
 
 // material-ui
 
@@ -16,8 +17,7 @@ import styles from './Order.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Order</h2>
-    {children}
+    <Checkout />
   </div>
 );
 
