@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Instruments } from './Instruments';
+import Instruments from './Instruments';
 
 describe('Component Instruments', () => {
   it('should render without crashing', () => {
-    const component = shallow(<InstrumentsComponent />);
+    const component = shallow(<Instruments />);
     expect(component).toBeTruthy();
   });
 });

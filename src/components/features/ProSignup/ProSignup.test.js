@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ProSignupComponent } from './Signup';
+import { ProSignupComponent } from './ProSignup';
 
 describe('Component ProSignup', () => {
   it('should render without crashing', () => {
