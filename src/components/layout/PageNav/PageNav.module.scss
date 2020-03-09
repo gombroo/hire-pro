@@ -1,4 +1,12 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+@media (max-width: 960px) {
+  .root {
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      display: none;
+    }
+  }
+}
+

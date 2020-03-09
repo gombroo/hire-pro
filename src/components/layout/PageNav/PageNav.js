@@ -34,7 +34,7 @@ const Component = ({className, children}) => {
 
   return (
     <div className={clsx(className, styles.root)}>
-      <nav>
+      <nav className={clsx(styles.navigation, classes.link)}>
         <Button className={classes.link} color="inherit" component={NavLink} exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</Button>
         <Button className={classes.link} color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/professionals`} activeClassName='active'>All Pros</Button>
         <Button className={classes.link} color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/pro`} activeClassName='active'>Pro Page</Button>

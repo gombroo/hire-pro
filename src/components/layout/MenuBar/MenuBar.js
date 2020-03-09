@@ -20,6 +20,7 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
+import { red } from '@material-ui/core/colors';
 
 // redux
 // import { connect } from 'react-redux';
@@ -35,6 +36,20 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+    color: theme.palette.secondary.main,
+  },
+  logo: {
+    marginTop: theme.spacing(1),
+    padding: theme.spacing(1),
+    borderRadius: 3,
+    fontSize: 50,
+    color: '#ab003c',
+    backgroundColor: theme.palette.secondary.main,
+  },
+  icons: {
+    [theme.breakpoints.down('sm')]: {
+      color: theme.palette.secondary.main,
+    },
   },
 }));
 
@@ -47,17 +62,17 @@ const Component = ({className, children}) => {
         <Toolbar>
           <RouterLink to="/" color="inherit">
             <Icon edge="start" className={classes.menuButton} color="inherit">
-              <HeadsetOutlinedIcon />
+              <HeadsetOutlinedIcon className={classes.logo}/>
             </Icon>
           </RouterLink>
           <Typography variant="h6" className={classes.title}>
             Hire Music Pro
           </Typography>
           <PageNav />
-          <IconButton aria-label="search" color="inherit" >
+          <IconButton className={classes.icons} aria-label="search" color="inherit" >
             <SearchIcon />
           </IconButton>
-          <IconButton edge="end" color="inherit">
+          <IconButton className={classes.icons}  edge="end" color="inherit">
             <AccountCircle />
           </IconButton>
         </Toolbar>
