@@ -19,29 +19,30 @@ import { ProSignup } from './components/features/ProSignup/ProSignup';
 import { ProPage } from './components/views/ProPage/ProPage';
 
 
-const theme = createMuiTheme({
-  palette: {
-    primary: { main: '#ab003c' },
-    secondary: { main: '#ffee33', light: '#eae6e6' },
-  },
-});
-
 // const theme = createMuiTheme({
 //   palette: {
-//     primary: {
-//       light: '#bb3363',
-//       main: '#ab003c',
-//       dark: '#77002a',
-//       contrastText: '#fff',
-//     },
-//     secondary: {
-//       light: '#ffee33',
-//       main: '#ffea00',
-//       dark: '#b2a300',
-//       contrastText: '#000',
-//     },
+//     primary: { main: '#ab003c' },
+//     secondary: { main: '#ffee33', light: '#eae6e6' },
 //   },
 // });
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#bb3363',
+      main: '#ab003c',
+      dark: '#77002a',
+      contrastText: '#fff',
+    },
+    secondary: {
+      main: '#ffee33',
+      //light: '#eae6e6',
+      light: '#eee',
+      dark: '#b2a300',
+      contrastText: '#000',
+    },
+  },
+});
 
 
 const App = () => (

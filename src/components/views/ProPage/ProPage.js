@@ -44,15 +44,17 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: theme.spacing(3),
-    backgroundColor: theme.palette.grey[200],
   },
   pageHeader: {
-    backgroundColor: theme.palette.grey[200],
+    backgroundColor: theme.palette.secondary.light,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     fontWeight: 'bold',
+  },
+  mainGrid: {
+    display: 'flex',
   },
 }));
 
@@ -70,9 +72,8 @@ const Component = ({ className, children }) => {
 
       <Container maxWidth="lg">
         <Box p={4}>
-          <Grid container spacing={3}>
-
-            <Grid item xs={12} sm={12} md={3}>
+          <Grid container spacing={3}  className={classes.mainGrid}>
+            <Grid item xs={12} sm={12} md={3} className={styles.info}>
               <Card>
                 <CardMedia
                   className={classes.media}
@@ -99,7 +100,6 @@ const Component = ({ className, children }) => {
                     <StarBorderIcon color="primary"/>
                   </Typography> */}
                 </CardContent>
-
                 <CardActions>
                   <Button disableElevation size="small" fullWidth variant="contained" color="primary">Contact</Button>
                   <IconButton aria-label="add to favorites">
@@ -108,12 +108,11 @@ const Component = ({ className, children }) => {
                   <IconButton aria-label="share">
                     <ShareIcon />
                   </IconButton>
-
                 </CardActions>
               </Card>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={6} className={styles.description}>
               <Card>
                 <CardContent>
                   {/* <Typography variant='h5'>Musician Info</Typography> */}
@@ -141,7 +140,7 @@ const Component = ({ className, children }) => {
               </Card>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={3}>
+            <Grid item xs={12} sm={12} md={3} className={styles.prices}>
               <Card>
                 <CardContent>
                   <Typography variant='button'>Basic Price: 200 PLN</Typography>

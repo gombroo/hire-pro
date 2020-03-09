@@ -10,6 +10,7 @@ import styles from './ProList.module.scss';
 import { Card } from '../../common/Card/Card';
 
 // material-ui
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container/';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -20,15 +21,24 @@ import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
+const useStyles = makeStyles(theme => ({
+  pageHeader: {
+    backgroundColor: theme.palette.secondary.light,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    fontWeight: 'bold',
+  },
+}));
 
 const Component = ({ className, children }) => {
+  const classes = useStyles();
+
   return (
     <div className={clsx(className, styles.root)}>
       <Grid item xs={12}>
-        <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column" bgcolor="secondary.light" color="secondary.contrastText"
-          fontWeight="fontWeightBold"
-          p={2}
-        >
+        <Box className={classes.pageHeader} p={2}>
           <HeadsetOutlinedIcon />
           <Typography variant="h5">All Professionals</Typography>
         </Box>

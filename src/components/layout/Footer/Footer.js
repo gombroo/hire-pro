@@ -3,21 +3,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
-import styles from './Footer.module.scss';
 
 // components
 
 // material-ui
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 
 // redux
 // import { connect } from 'react-redux';
@@ -40,14 +35,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor:
       theme.palette.type === 'dark' ? theme.palette.grey[800] : theme.palette.grey[200],
   },
-
-  // appBar: {
-  //   top: 'auto',
-  //   bottom: 0,
-  // },
-  // menuItem: {
-  //   justifyContent: 'flex-end',
-  // },
 }));
 
 const Component = ({className, children}) => {
@@ -64,13 +51,6 @@ const Component = ({className, children}) => {
         </Container>
       </footer>
     </div>
-    // <div className={clsx(className, styles.root)}>
-    //   <AppBar position="static" color="inherit" className={classes.appBar}>
-    //     <Toolbar className={classes.menuItem}>
-    //       <Button>© Hire Music Pro | 2020</Button>
-    //     </Toolbar>
-    //   </AppBar>
-    // </div>
   );
 };
 

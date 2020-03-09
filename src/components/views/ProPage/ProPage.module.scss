@@ -1,4 +1,13 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+@media (max-width: 960px) {
+  .root {
+    .info {
+      order: -1;
+    }
+    .prices {
+      order: -1;
+    }
+  }
+}
+

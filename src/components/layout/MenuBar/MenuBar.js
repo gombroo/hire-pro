@@ -54,9 +54,6 @@ const Component = ({className, children}) => {
             Hire Music Pro
           </Typography>
           <PageNav />
-
-          {/* <TopBar /> */}
-
           <IconButton aria-label="search" color="inherit" >
             <SearchIcon />
           </IconButton>

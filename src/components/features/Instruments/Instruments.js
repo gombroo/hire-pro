@@ -154,10 +154,9 @@ function Instruments(props) {
   ];
 
   return (
-    // <Container maxWidth="lg">
     <Container className={classes.root}>
       <Typography variant="h4" align="center" component="h2">
-        What type of musician do you need?
+        Choose instrumentalist
       </Typography>
       <div className={classes.images}>
         {images.map(image => (

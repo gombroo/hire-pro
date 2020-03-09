@@ -19,8 +19,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-// import StarIcon from '@material-ui/icons/Star';
-// import StarBorderIcon from '@material-ui/icons/StarBorder';
 import IconButton from '@material-ui/core/IconButton';
 
 // redux
@@ -36,8 +34,6 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: theme.spacing(5),
-    // textAlign: 'center',
-    //color: theme.palette.primary.main,
   },
 }));
 
@@ -53,7 +49,6 @@ const Component = ({className, children}) => {
             image="https://images.pexels.com/photos/876714/pexels-photo-876714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             title="Musician Photo"
           />
-
           <CardContent>
             <Typography variant="h5" component="h2">
               Johnny Zamulony
@@ -68,16 +63,6 @@ const Component = ({className, children}) => {
               Genres: rock, jazz<br/>
             </Typography>
             <StarRating />
-            {/* <Typography variant="h4" component="p">
-              <StarIcon color="primary"/>
-              <StarIcon color="primary"/>
-              <StarIcon color="primary"/>
-              <StarIcon color="primary"/>
-              <StarIcon color="primary"/>
-              <StarBorderIcon color="primary"/>
-              <StarBorderIcon color="primary"/>
-              <StarBorderIcon color="primary"/>
-            </Typography> */}
           </CardContent>
         </CardActionArea>
         <CardActions>
