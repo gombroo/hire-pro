@@ -20,7 +20,6 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
-import { red } from '@material-ui/core/colors';
 
 // redux
 // import { connect } from 'react-redux';
