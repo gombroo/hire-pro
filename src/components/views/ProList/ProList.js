@@ -11,7 +11,7 @@ import { Card } from '../../common/Card/Card';
 
 // material-ui
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container/';
+//import Container from '@material-ui/core/Container/';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -87,14 +87,14 @@ Component.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  professionals: getAllPros (state),
+  professionals: getAllPros(state),
 });
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg),)
 // });
 
-//const Container = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
+const Container = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
 
 export {
   Component as ProList,

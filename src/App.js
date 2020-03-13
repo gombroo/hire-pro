@@ -11,20 +11,13 @@ import { CssBaseline } from '@material-ui/core';
 // components
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
-import { ProList } from './components/views/ProList/ProList';
+import { ProListContainer } from './components/views/ProList/ProList';
 import { Order } from './components/views/Order/Order';
 import { NotFound } from './components/views/NotFound/NotFound';
 import { ProLogin } from './components/features/ProLogin/ProLogin';
 import { ProSignup } from './components/features/ProSignup/ProSignup';
 import { ProPage } from './components/views/ProPage/ProPage';
 
-
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: { main: '#ab003c' },
-//     secondary: { main: '#ffee33', light: '#eae6e6' },
-//   },
-// });
 
 const theme = createMuiTheme({
   palette: {
@@ -54,7 +47,7 @@ const App = () => (
           <MainLayout>
             <Switch>
               <Route exact path='/' component={Homepage} />
-              <Route exact path={'/professionals'} component={ProList} />
+              <Route exact path={'/professionals'} component={ProListContainer} />
               <Route exact path={'/pro'} component={ProPage} />
               <Route exact path={'/order'} component={Order} />
               <Route exact path={'/prologin'} component={ProLogin} />

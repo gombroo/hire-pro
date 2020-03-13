@@ -95,6 +95,6 @@ const Container = connect(mapStateToProps/*, mapDispatchToProps*/)(Component);
 
 export {
   Component as Card,
-  //Container as Card,
+  Container as CardContainer,
   Component as CardComponent,
 };
