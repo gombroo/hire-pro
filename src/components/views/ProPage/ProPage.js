@@ -60,6 +60,8 @@ const useStyles = makeStyles(theme => ({
 
 const Component = ({ className, children }) => {
   const classes = useStyles();
+  // const {id, name, type, instrument, genre, email, rating, featured, price, image, description } = this.props;
+
 
   return (
     <div className={clsx(className, styles.root)}>
@@ -83,6 +85,7 @@ const Component = ({ className, children }) => {
                 <CardContent>
                   <Typography variant="h5" component="h2">
                   Johnny Zamulony
+                    {/* {name} */}
                   </Typography>
                   <Typography color="textSecondary">
                     drummer
@@ -206,6 +209,9 @@ const Component = ({ className, children }) => {
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  name: PropTypes.string,
+  //type: PropTypes.string,
+
 };
 
 // const mapStateToProps = state => ({

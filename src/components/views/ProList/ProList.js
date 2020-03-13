@@ -18,22 +18,25 @@ import Box from '@material-ui/core/Box';
 import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
 // redux
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import { connect } from 'react-redux';
+import { getAllPros } from '../../../redux/prosRedux.js';
 
-const useStyles = makeStyles(theme => ({
-  pageHeader: {
-    backgroundColor: theme.palette.secondary.light,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    fontWeight: 'bold',
-  },
-}));
 
-const Component = ({ className, children }) => {
+// const useStyles = makeStyles(theme => ({
+//   pageHeader: {
+//     backgroundColor: theme.palette.secondary.light,
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     flexDirection: 'column',
+//     fontWeight: 'bold',
+//   },
+// }));
+
+const Component = ({ className }) => {
+
   const classes = useStyles();
+  const { pros } = this.props;
 
   return (
     <div className={clsx(className, styles.root)}>
@@ -46,18 +49,15 @@ const Component = ({ className, children }) => {
       <Container maxWidth="lg">
         <Box pt={4}>
           <Grid container spacing={5}>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card />
+
+            <Grid item xs={12} >
+              {pros.map(pro => (
+                <div key={pro.id}>
+                  <Card {...pro} />
+                </div>
+              ))}
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card />
-            </Grid>
+
           </Grid>
         </Box>
       </Container>
@@ -86,18 +86,18 @@ Component.propTypes = {
   className: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
+const mapStateToProps = state => ({
+  professionals: getAllPros (state),
+});
 
 // const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
+//   someAction: arg => dispatch(reduxActionCreator(arg),)
 // });
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const Container = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
 
 export {
   Component as ProList,
-  // Container as MusiciansList,
+  Container as ProListContainer,
   Component as ProListComponent,
 };
