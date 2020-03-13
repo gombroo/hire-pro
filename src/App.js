@@ -11,7 +11,7 @@ import { CssBaseline } from '@material-ui/core';
 // components
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
-import ProList from './components/views/ProList/ProList';
+import { ProList } from './components/views/ProList/ProList';
 import { Order } from './components/views/Order/Order';
 import { NotFound } from './components/views/NotFound/NotFound';
 import { ProLogin } from './components/features/ProLogin/ProLogin';

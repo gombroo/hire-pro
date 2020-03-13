@@ -22,16 +22,16 @@ import { connect } from 'react-redux';
 import { getAllPros } from '../../../redux/prosRedux.js';
 
 
-// const useStyles = makeStyles(theme => ({
-//   pageHeader: {
-//     backgroundColor: theme.palette.secondary.light,
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     flexDirection: 'column',
-//     fontWeight: 'bold',
-//   },
-// }));
+const useStyles = makeStyles(theme => ({
+  pageHeader: {
+    backgroundColor: theme.palette.secondary.light,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    fontWeight: 'bold',
+  },
+}));
 
 const Component = ({ className }) => {
 
@@ -94,7 +94,7 @@ const mapStateToProps = state => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg),)
 // });
 
-const Container = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
+//const Container = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
 
 export {
   Component as ProList,
