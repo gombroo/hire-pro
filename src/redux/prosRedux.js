@@ -1,9 +1,17 @@
 /* selectors */
 export const getAllPros = ({pros}) => pros;
-export const getSingleProById = ({pros}, id) => pros.filter(pro => pro.id === id);
+
+export const getSingleProById = ({pros}, id) =>
+  pros.filter(pro => pro.id === id);
+
+export const getFeatured = ({ pros }) =>
+  pros.filter(pro => pro.featured === true);
+
+// export const getProsByCategory = ({ pros }, categoryId) =>
+//   categoryId ? pros.filter(pro => pro.category === categoryId) : pros;
 
 // export const getAllInstruments =({pros}) => pros.instrument;
-// export const getAllMusicians = ({pros}) => pros.filter(pro => pro.type = 'musician');
+// export const getAllMusicians = ({pros}) => pros.filter(pro => pro.category = 'musician');
 
 /* action name creator */
 const reducerName = 'pros';

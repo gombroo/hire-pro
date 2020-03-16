@@ -1,6 +1,7 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // styles
 import clsx from 'clsx';
@@ -12,11 +13,12 @@ import { StarRating } from '../../features/StarRating/StarRating';
 
 // material-ui
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container/Container';
+
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container/Container';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -33,7 +35,7 @@ import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
 // redux
 // import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+// import { getSingleProById /*, reduxActionCreator*/ } from '../../../redux/prosRedux.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -58,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({ className, children }) => {
+const Component = ({className, name, instrument, genre, price, image }) => {
   const classes = useStyles();
   // const {id, name, type, instrument, genre, email, rating, featured, price, image, description } = this.props;
 
@@ -85,13 +87,14 @@ const Component = ({ className, children }) => {
                 <CardContent>
                   <Typography variant="h5" component="h2">
                   Johnny Zamulony
-                    {/* {name} */}
+                    {name}
                   </Typography>
                   <Typography color="textSecondary">
                     drummer
                   </Typography>
                   <Typography variant="button" component="p">
                     Genres: rock, jazz<br/>
+
                   </Typography>
                   <StarRating />
                   {/* <Typography variant="h4" component="p">
@@ -118,7 +121,6 @@ const Component = ({ className, children }) => {
             <Grid item xs={12} sm={12} md={6} className={styles.description}>
               <Card>
                 <CardContent>
-                  {/* <Typography variant='h5'>Musician Info</Typography> */}
                   <br/>
                   <Typography paragraph>
                     Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
@@ -174,30 +176,12 @@ const Component = ({ className, children }) => {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button disableElevation size="small" fullWidth variant="contained" color="primary">Order Premium</Button>
+                  <Button disableElevation size="small" fullWidth variant="contained" color="primary">
+                    <Link to={`/order`}>Order Premium</Link>
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
-
-            {/* <Grid item xs={12} sm={6}>
-              12/6
-            </Grid>
-
-            <Grid item xs={12}>
-              12
-            </Grid>
-
-            <Grid item xs={3}>
-              ...3
-            </Grid>
-
-            <Grid item xs={3}>
-              ...3
-            </Grid>
-
-            <Grid item xs={3}>
-              ...3
-            </Grid> */}
 
           </Grid>
         </Box>
@@ -207,25 +191,27 @@ const Component = ({ className, children }) => {
 };
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   name: PropTypes.string,
-  //type: PropTypes.string,
-
+  image: PropTypes.string,
+  genre: PropTypes.string,
+  price: PropTypes.number,
+  instrument: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
+// const mapStateToProps = (state) => ({
+//   singlePro: getSingleProById(state),
 // });
+
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+// const ComponentContainer = connect(mapStateToProps)(Component);
 
 export {
   Component as ProPage,
-  // Container as ProPage,
+  // ComponentContainer as ProPageContainer,
   Component as ProPageComponent,
 };

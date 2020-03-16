@@ -28,16 +28,14 @@ import { getSingleProById /*, reduxActionCreator*/ } from '../../../redux/prosRe
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    width: 250,
   },
   media: {
-    height: 160,
-  },
-  paper: {
-    padding: theme.spacing(5),
+    height: 180,
   },
 }));
 
-const Component = ({className}, id) => {
+const Component = ({className, name, instrument, genre, price, image }) => {
   const classes = useStyles();
 
   return (
@@ -46,21 +44,21 @@ const Component = ({className}, id) => {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image="https://images.pexels.com/photos/876714/pexels-photo-876714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            image={image}
             title="Musician Photo"
           />
           <CardContent>
             <Typography variant="h5" component="h2">
-              Johnny Zamulony
+              {name}
             </Typography>
             <Typography color="textSecondary">
-              drummer
+              {instrument}
             </Typography>
             <Typography variant="subtitle1" component="p">
-              Price: from 200 PLN<br/>
+              { price }
             </Typography>
             <Typography variant="button" component="p">
-              Genres: rock, jazz<br/>
+              {genre}
             </Typography>
             <StarRating />
           </CardContent>
@@ -77,10 +75,13 @@ const Component = ({className}, id) => {
   );
 };
 
-
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
+  name: PropTypes.string,
+  image: PropTypes.string,
+  genre: PropTypes.string,
+  price: PropTypes.number,
+  instrument: PropTypes.string,
 };
 
 const mapStateToProps = (state) => ({

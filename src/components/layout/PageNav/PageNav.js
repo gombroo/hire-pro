@@ -19,9 +19,6 @@ import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
   link: {
     borderWidth: 2,
     color: '#fff',
@@ -29,20 +26,60 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({className, children}) => {
+const Component = ({ className, children }) => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(className, styles.root)}>
-      <nav className={clsx(styles.navigation, classes.link)}>
-        <Button className={classes.link} color="inherit" component={NavLink} exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</Button>
-        <Button className={classes.link} color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/professionals`} activeClassName='active'>All Pros</Button>
-        <Button className={classes.link} color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/pro`} activeClassName='active'>Pro Page</Button>
-        <Button className={classes.link} color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/order`} activeClassName='active'>Order</Button>
-        <Button className={classes.link} variant="outlined" color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/prologin`} activeClassName='active'>Login</Button>
-        <Button className={classes.link} variant="outlined" color="inherit" component={NavLink} to={`${process.env.PUBLIC_URL}/prosignup`} activeClassName='active'>Signup</Button>
-      </nav>
-    </div>
+    <nav className={clsx(styles.navigation, classes.link)}>
+      <Button
+        color="inherit"
+        component={NavLink}
+        exact to={`${process.env.PUBLIC_URL}/`}>
+        Home
+      </Button>
+      <Button
+        color="inherit"
+        component={NavLink}
+        to={`${process.env.PUBLIC_URL}/professionals`} >
+        All Pros
+      </Button>
+      <Button
+        color="inherit"
+        component={NavLink}
+        to={`${process.env.PUBLIC_URL}/pro/:id`}>
+        Pro Page
+      </Button>
+      <Button
+        color="inherit"
+        component={NavLink}
+        to={`${process.env.PUBLIC_URL}/order`}>
+        Order
+      </Button>
+      <Button
+        className={classes.link}
+        color="inherit"
+        component={NavLink}
+        to={`${process.env.PUBLIC_URL}/contact`}>
+        Contact
+      </Button>
+      <Button
+        className={classes.link}
+        variant="outlined"
+        color="inherit"
+        component={NavLink}
+        to={`${process.env.PUBLIC_URL}/prologin`}>
+        Login
+      </Button>
+      <Button
+        className={classes.link}
+        variant="outlined"
+        color="inherit"
+        component={NavLink}
+        to={`${process.env.PUBLIC_URL}/prosignup`}>
+        Signup
+      </Button>
+    </nav>
+
   );
 };
 
@@ -63,6 +100,6 @@ Component.propTypes = {
 
 export {
   Component as PageNav,
-  // Container as PageNav,
+  // ComponentContainer as PageNav,
   Component as PageNavComponent,
 };

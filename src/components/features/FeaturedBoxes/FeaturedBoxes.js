@@ -12,11 +12,12 @@ import { Card } from '../../common/Card/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container/';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
 // redux
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import { connect } from 'react-redux';
+import { getFeatured } from '../../../redux/prosRedux';
 
 
 const useStyles = makeStyles(theme => ({
@@ -33,11 +34,25 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({ className, children }) => {
+
+const Component = ({ className }) => {
   const classes = useStyles();
 
   return (
     <div className={clsx(className, classes.root)}>
+
+      <Container maxWidth="lg">
+        <Box pt={4}>
+          <Grid container minWidth="200" spacing={6} justify="center">
+            {/* {featured.map(pro => (
+              <Grid item key={pro.id}>
+                <Card {...pro} />
+              </Grid>
+            ))} */}
+          </Grid>
+        </Box>
+      </Container>
+
       <Container maxWidth="lg">
         <Typography component="h2" variant="h4" align="center">
           Featured Musicians
@@ -62,22 +77,22 @@ const Component = ({ className, children }) => {
 };
 
 Component.propTypes = {
-  children: PropTypes.node,
+  featuredPros: PropTypes.node,
   className: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
+const mapStateToProps = state => ({
+  featured: getFeatured(state),
+});
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const ComponentContainer = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
 
 export {
   Component as FeaturedBoxes,
-  // Container as FeaturedBoxes,
+  ComponentContainer as FeaturedBoxesContainer,
   Component as FeaturedBoxesComponent,
 };
