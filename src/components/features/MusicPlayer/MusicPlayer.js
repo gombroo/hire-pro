@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Component = ({ className, children }) => {
+const Component = () => {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -88,7 +88,6 @@ const Component = ({ className, children }) => {
 
 Component.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({

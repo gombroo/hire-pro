@@ -23,10 +23,11 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(theme => ({
   submit: {
     backgroundColor: theme.palette.secondary.main,
+    boxShadow: 'none',
   },
 }));
 
-const Component = ({ className, children }) => {
+const Component = ({ className }) => {
   const classes = useStyles();
 
   return (
@@ -39,7 +40,6 @@ const Component = ({ className, children }) => {
               <h1 className={styles.pageTitle}>Hire a pro!</h1>
               <h2 className={styles.pageSlogan}>order music for event, web, project</h2>
               <Button className={classes.submit}
-                disableElevation
                 size="lg"
                 variant="contained"
               >
@@ -57,7 +57,6 @@ const Component = ({ className, children }) => {
 };
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
 };
 

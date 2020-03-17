@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
 import styles from './ProLogin.module.scss';
 
 // components
@@ -50,14 +49,15 @@ const useStyles = makeStyles(theme => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    boxShadow: 'none',
   },
 }));
 
-const Component = ({ className }) => {
+const Component = () => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(className, styles.root)}>
+    <div className={styles.root}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
@@ -95,7 +95,6 @@ const Component = ({ className }) => {
               label="Remember me"
             />
             <Button
-              disableElevation
               type="submit"
               fullWidth
               variant="contained"
@@ -124,7 +123,7 @@ const Component = ({ className }) => {
 };
 
 Component.propTypes = {
-  className: PropTypes.string,
+  childre: PropTypes.node,
 };
 
 // const mapStateToProps = state => ({

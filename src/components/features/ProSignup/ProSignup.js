@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
 import styles from './ProSignup.module.scss';
 
 // components
@@ -18,7 +17,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -47,14 +45,15 @@ const useStyles = makeStyles(theme => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    boxShadow: 'none',
   },
 }));
 
-const Component = ({ className, children }) => {
+const Component = () => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(className, styles.root)}>
+    <div className={styles.root}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
@@ -120,7 +119,6 @@ const Component = ({ className, children }) => {
               </Grid>
             </Grid>
             <Button
-              disableElevation
               type="submit"
               fullWidth
               variant="contained"
@@ -138,18 +136,13 @@ const Component = ({ className, children }) => {
             </Grid>
           </form>
         </div>
-        <Box mt={5}>
-          {/* <Copyright /> */}
-        </Box>
       </Container>
     </div>
-
   );
 };
 
 Component.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 // const mapStateToProps = state => ({
 //   someProp: reduxSelector(state),

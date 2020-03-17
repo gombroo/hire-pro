@@ -49,7 +49,8 @@ const App = () => (
             <Switch>
               <Route exact path='/' component={Homepage} />
               <Route exact path={'/professionals'} component={ProListContainer} />
-              <Route exact path={'/pro/:id'} component={ProPage} />
+              {/* <Route exact path={'/professionals/:id'} component={ProPage} /> */}
+              <Route exact path={'/pro/:proId'} component={ProPage} />
               <Route exact path={'/order'} component={Order} />
               <Route exact path={'/prologin'} component={ProLogin} />
               <Route exact path={'/prosignup'} component={ProSignup} />

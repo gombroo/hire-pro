@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
 import styles from './Header.module.scss';
 
 // components
@@ -16,15 +15,14 @@ import { MenuBar } from '../MenuBar/MenuBar';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 
-const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
+const Component = () => (
+  <div className={styles.root}>
     <MenuBar />
   </div>
 );
 
 Component.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({

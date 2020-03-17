@@ -24,14 +24,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import IconButton from '@material-ui/core/IconButton';
-// import StarIcon from '@material-ui/icons/Star';
-// import StarBorderIcon from '@material-ui/icons/StarBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
-
-// import AppBar from '@material-ui/core/AppBar/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar/Toolbar';
 
 // redux
 // import { connect } from 'react-redux';
@@ -58,19 +53,20 @@ const useStyles = makeStyles(theme => ({
   mainGrid: {
     display: 'flex',
   },
+  button: {
+    boxShadow: 'none',
+  },
 }));
 
-const Component = ({className, name, instrument, genre, price, image }) => {
+const Component = ({children, className, name, instrument, genre, rating, price, descritpion, image, match }) => {
   const classes = useStyles();
-  // const {id, name, type, instrument, genre, email, rating, featured, price, image, description } = this.props;
-
 
   return (
     <div className={clsx(className, styles.root)}>
       <Grid item xs={12}>
         <Box className={classes.pageHeader} p={2}>
           <HeadsetOutlinedIcon />
-          <Typography variant="h5">Pro Page</Typography>
+          <Typography variant="h5">{name}Pro Page</Typography>
         </Box>
       </Grid>
 
@@ -81,7 +77,7 @@ const Component = ({className, name, instrument, genre, price, image }) => {
               <Card>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.pexels.com/photos/876714/pexels-photo-876714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  image={image}
                   title="Johny Zamulony"
                 />
                 <CardContent>
@@ -91,12 +87,14 @@ const Component = ({className, name, instrument, genre, price, image }) => {
                   </Typography>
                   <Typography color="textSecondary">
                     drummer
+                    {instrument}
                   </Typography>
                   <Typography variant="button" component="p">
                     Genres: rock, jazz<br/>
-
+                    {genre}
                   </Typography>
                   <StarRating />
+                  {rating}
                   {/* <Typography variant="h4" component="p">
                     <StarIcon color="primary"/>
                     <StarIcon color="primary"/>
@@ -107,7 +105,7 @@ const Component = ({className, name, instrument, genre, price, image }) => {
                   </Typography> */}
                 </CardContent>
                 <CardActions>
-                  <Button disableElevation size="small" fullWidth variant="contained" color="primary">Contact</Button>
+                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Contact</Button>
                   <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                   </IconButton>
@@ -121,6 +119,7 @@ const Component = ({className, name, instrument, genre, price, image }) => {
             <Grid item xs={12} sm={12} md={6} className={styles.description}>
               <Card>
                 <CardContent>
+                  {descritpion}
                   <br/>
                   <Typography paragraph>
                     Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
@@ -148,35 +147,35 @@ const Component = ({className, name, instrument, genre, price, image }) => {
             <Grid item xs={12} sm={12} md={3} className={styles.prices}>
               <Card>
                 <CardContent>
-                  <Typography variant='button'>Basic Price: 200 PLN</Typography>
+                  <Typography variant='button'>Basic Price: {price} 200 PLN</Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
                     Includes separate drum tracks in mp3 format.
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button disableElevation size="small" fullWidth variant="contained" color="primary">Order Basic</Button>
+                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Basic</Button>
                 </CardActions>
 
                 <CardContent>
-                  <Typography variant='button'>Standard Price: 300 PLN</Typography>
+                  <Typography variant='button'>Standard Price: {price} 300 PLN</Typography>
                   <br/>
                   <Typography variant="body2" color="textSecondary" component="p">
                     Includes separate tracks in wav format.
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button disableElevation size="small" fullWidth variant="contained" color="primary">Order Standard</Button>
+                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Standard</Button>
                 </CardActions>
 
                 <CardContent>
-                  <Typography variant='button'>Premium Price: 500 PLN</Typography>
+                  <Typography variant='button'>Premium Price: {price} 500 PLN</Typography>
                   <br/>
                   <Typography variant="body2" color="textSecondary" component="p">
                     Includes separate tracks in WAV format, mixed drums.
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button disableElevation size="small" fullWidth variant="contained" color="primary">
+                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">
                     <Link to={`/order`}>Order Premium</Link>
                   </Button>
                 </CardActions>
@@ -191,12 +190,17 @@ const Component = ({className, name, instrument, genre, price, image }) => {
 };
 
 Component.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   name: PropTypes.string,
   image: PropTypes.string,
   genre: PropTypes.string,
   price: PropTypes.number,
   instrument: PropTypes.string,
+  descritpion: PropTypes.string,
+  rating: PropTypes.string,
+  featured: PropTypes.bool,
+  match: PropTypes.object,
 };
 
 // const mapStateToProps = (state) => ({

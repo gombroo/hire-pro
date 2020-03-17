@@ -38,13 +38,13 @@ const useStyles = makeStyles({
   },
 });
 
-const Component = ({className, children}) => {
+const Component = () => {
   const [value, setValue] = React.useState(2);
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
 
   return (
-    <div className={clsx(className, styles.root, classes.root)}>
+    <div className={clsx(styles.root, classes.root)}>
       <Rating
         name="hover-feedback"
         value={value}
@@ -63,7 +63,6 @@ const Component = ({className, children}) => {
 
 Component.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({

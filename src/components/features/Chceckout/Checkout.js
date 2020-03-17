@@ -46,6 +46,7 @@ const useStyles = makeStyles(theme => ({
   button: {
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(1),
+    boxShadow: 'none',
   },
 }));
 
@@ -112,7 +113,6 @@ export default function Checkout() {
                     </Button>
                   )}
                   <Button
-                    disableElevation
                     variant="contained"
                     color="primary"
                     onClick={handleNext}

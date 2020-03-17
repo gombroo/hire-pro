@@ -49,9 +49,9 @@ const Component = ({ className, children }) => {
 
   return (
     <div>
-      <Button className={classes.hamburger} >
+      <div className={classes.hamburger} >
         <Hambugrer />
-      </Button>
+      </div>
       <nav className={clsx(classes.link, classes.navigation)}>
         <Button
           color="inherit"
@@ -68,7 +68,7 @@ const Component = ({ className, children }) => {
         <Button
           color="inherit"
           component={NavLink}
-          to={`${process.env.PUBLIC_URL}/pro/:id`}>
+          to={`${process.env.PUBLIC_URL}/pro/:proId`}>
           Pro Page
         </Button>
         <Button

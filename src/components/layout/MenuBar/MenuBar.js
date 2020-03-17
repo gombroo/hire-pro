@@ -57,7 +57,7 @@ const Component = ({className, children}) => {
 
   return(
     <div className={clsx(className, styles.root)}>
-      <AppBar disableElevation position="static">
+      <AppBar position="static">
         <Toolbar>
           <RouterLink to="/" color="inherit">
             <Icon edge="start" className={classes.menuButton} color="inherit">

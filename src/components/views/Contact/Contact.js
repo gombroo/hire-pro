@@ -56,6 +56,7 @@ const useStyles = theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
     padding: theme.spacing(1.5),
+    boxShadow: 'none',
   },
 });
 
@@ -93,7 +94,6 @@ class Contact extends React.Component {
               </FormControl>
 
               <Button
-                disableElevation
                 type="submit"
                 fullWidth
                 variant="contained"

@@ -191,4 +191,83 @@ export const initialState = {
       'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
     },
   ],
+  navCategories: [
+    // { id: 'home', name: 'Home', link: '/' },
+    { id: 'professionals', name: 'All Pros', link: '/professionals' },
+    { id: 'singers', name: 'Singers', link: '/professionals/singers' },
+    { id: 'guitarists', name: 'Guitarists', link: '/professionals/guitarists' },
+    { id: 'djs', name: 'DJs', link: '/professionals/djs' },
+    { id: 'bass players', name: 'Bass Players', link: '/professionals/bass-players' },
+    { id: 'saxophonists', name: 'Saxophonists', link: '/professionals/saxophonists' },
+    { id: 'drummers', name: 'DJs', link: '/professionals/djs' },
+    { id: 'piano players', name: 'Piano Players', link: '/professionals/piano-players' },
+    { id: 'violin players', name: 'Violin Players', link: '/professionals/violin-players' },
+    // { id: 'order', name: 'Order', link: '/order' },
+    // { id: 'contact', name: 'Contact', link: '/contact' },
+  ],
+  instruments: [
+    {
+      id: '100',
+      url:
+        'https://images.pexels.com/photos/675960/mic-music-sound-singer-675960.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Singers',
+      width: '32.5%',
+    },
+    {
+      id: '101',
+      url:
+        'https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Guitarists',
+      width: '32.5%',
+    },
+    {
+      id: '102',
+      url:
+        'https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Bass Players',
+      width: '32.5%',
+    },
+    {
+      id: '103',
+      url:
+        'https://images.pexels.com/photos/730656/pexels-photo-730656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Drummers',
+      width: '32.5%',
+    },
+    {
+      id: '104',
+      url:
+        'https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Piano Players',
+      width: '32.5%',
+    },
+    {
+      id: '105',
+      url:
+        'https://images.pexels.com/photos/3120109/pexels-photo-3120109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Violin Players',
+      width: '32.5%',
+    },
+    {
+      id: '106',
+      url:
+        'https://images.pexels.com/photos/462510/pexels-photo-462510.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+      title: 'Cellists',
+      width: '32.5%',
+    },
+    {
+      id: '107',
+      url:
+        'https://images.pexels.com/photos/45243/saxophone-music-gold-gloss-45243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Saxophonists',
+      width: '32.5%',
+    },
+    {
+      id: '108',
+      url:
+        'https://images.pexels.com/photos/860707/pexels-photo-860707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'DJs',
+      width: '32.5%',
+    },
+  ],
 };

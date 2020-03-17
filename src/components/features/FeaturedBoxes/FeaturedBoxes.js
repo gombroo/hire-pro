@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
 
 // components
 import { Card } from '../../common/Card/Card';
@@ -18,7 +17,6 @@ import Typography from '@material-ui/core/Typography';
 // redux
 import { connect } from 'react-redux';
 import { getFeatured } from '../../../redux/prosRedux';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,18 +33,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Component = ({ className, featured }) => {
+const Component = ({ featured }) => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(className, classes.root)}>
-
-      <Container maxWidth="lg">
+    <div className={classes.root}>
+      <Container>
         <Typography component="h2" variant="h4" align="center">
           Featured Musicians
         </Typography>
         <Box pt={4}>
-          <Grid container minWidth="200" spacing={6} justify="center">
+          <Grid container spacing={6} justify="center">
             {featured.slice(0, 4).map(pro => (
               <Grid item key={pro.id}>
                 <Card {...pro} />
@@ -61,7 +58,6 @@ const Component = ({ className, featured }) => {
 
 Component.propTypes = {
   featured: PropTypes.array,
-  className: PropTypes.string,
 };
 
 const mapStateToProps = state => ({
@@ -72,7 +68,7 @@ const mapStateToProps = state => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-const ComponentContainer = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
+const ComponentContainer = connect(mapStateToProps)(Component);
 
 export {
   Component as FeaturedBoxes,

@@ -7,6 +7,10 @@ export const getSingleProById = ({pros}, id) =>
 export const getFeatured = ({ pros }) =>
   pros.filter(pro => pro.featured === true);
 
+export const getProById = ({ pros }, proId) => {
+  pros.filter(item => item.id === proId);
+};
+
 // export const getProsByCategory = ({ pros }, categoryId) =>
 //   categoryId ? pros.filter(pro => pro.category === categoryId) : pros;
 

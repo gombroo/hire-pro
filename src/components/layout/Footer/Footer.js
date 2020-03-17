@@ -37,6 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
 const Component = ({className, children}) => {
   const classes = useStyles();
 

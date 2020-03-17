@@ -16,7 +16,6 @@ import Typography from '@material-ui/core/Typography';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-
 const styles = theme => ({
   root: {
     marginTop: theme.spacing(10),
@@ -96,7 +95,7 @@ const styles = theme => ({
 
 function Instruments(props) {
   const { classes } = props;
-  const images = [
+  const instruments = [
     {
       url:
         'https://images.pexels.com/photos/675960/mic-music-sound-singer-675960.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -159,18 +158,18 @@ function Instruments(props) {
         Choose instrumentalist
       </Typography>
       <div className={classes.images}>
-        {images.map(image => (
+        {instruments.map(instrument => (
           <ButtonBase
-            key={image.title}
+            key={instrument.title}
             className={classes.imageWrapper}
             style={{
-              width: image.width,
+              width: instrument.width,
             }}
           >
             <div
               className={classes.imageSrc}
               style={{
-                backgroundImage: `url(${image.url})`,
+                backgroundImage: `url(${instrument.url})`,
               }}
             />
             <div className={classes.imageBackdrop} />
@@ -181,7 +180,7 @@ function Instruments(props) {
                 color="inherit"
                 className={classes.imageTitle}
               >
-                {image.title}
+                {instrument.title}
                 <div className={classes.imageMarked} />
               </Typography>
             </div>
@@ -194,6 +193,7 @@ function Instruments(props) {
 
 Instruments.propTypes = {
   classes: PropTypes.object.isRequired,
+  //instruments: PropTypes.array,
 };
 
 export default withStyles(styles)(Instruments);

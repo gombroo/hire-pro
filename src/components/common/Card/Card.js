@@ -3,8 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
-import styles from './Card.module.scss';
 
 // components
 import { StarRating } from '../../features/StarRating/StarRating';
@@ -23,7 +21,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 // redux
 import { connect } from 'react-redux';
-import { getSingleProById /*, reduxActionCreator*/ } from '../../../redux/prosRedux.js';
+import { getSingleProById } from '../../../redux/prosRedux.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,13 +31,17 @@ const useStyles = makeStyles(theme => ({
   media: {
     height: 180,
   },
+  button: {
+    boxShadow: 'none',
+  },
 }));
 
-const Component = ({className, name, instrument, genre, price, image }) => {
+
+const Component = ({name, instrument, genre, price, image }) => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(className, styles.root)}>
+    <div>
       <Card className={classes.root} variant="outlined">
         <CardActionArea>
           <CardMedia
@@ -65,7 +67,7 @@ const Component = ({className, name, instrument, genre, price, image }) => {
         </CardActionArea>
         <CardActions>
           <Button size="small" fullWidth variant="outlined" color="inherit">More Info</Button>
-          <Button disableElevation size="small" variant="contained" color="primary">Order</Button>
+          <Button  size="small" variant="contained" color="primary" className={classes.button}>Order</Button>
           <IconButton color="primary" aria-label="add to shopping cart">
             <FavoriteBorderIcon />
           </IconButton>
@@ -76,7 +78,6 @@ const Component = ({className, name, instrument, genre, price, image }) => {
 };
 
 Component.propTypes = {
-  className: PropTypes.string,
   name: PropTypes.string,
   image: PropTypes.string,
   genre: PropTypes.string,
@@ -92,7 +93,7 @@ const mapStateToProps = (state) => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-const Container = connect(mapStateToProps/*, mapDispatchToProps*/)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
   Component as Card,

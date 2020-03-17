@@ -3,8 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
-import styles from './ProList.module.scss';
 
 // components
 import { Card } from '../../common/Card/Card';
@@ -19,7 +17,7 @@ import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
 // redux
 import { connect } from 'react-redux';
-import { getAllPros } from '../../../redux/prosRedux.js';
+import { getAllPros, getProById } from '../../../redux/prosRedux.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,12 +33,18 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const Component = ({
+  professionals,
+  match: {
+    params: { proId },
+  },
+}) =>
 
-const Component = ({ className, professionals }) => {
+{
   const classes = useStyles();
 
   return (
-    <div className={clsx(className, styles.root)}>
+    <div>
       <Grid item xs={12}>
         <Box className={classes.pageHeader} p={2}>
           <HeadsetOutlinedIcon />
@@ -50,7 +54,7 @@ const Component = ({ className, professionals }) => {
 
       <Container maxWidth="lg">
         <Box pt={4}>
-          <Grid container minWidth="200" spacing={6} justify="center">
+          <Grid container spacing={6} justify="center">
             {professionals.map(pro => (
               <Grid item key={pro.id}>
                 <Card {...pro} />
@@ -59,35 +63,25 @@ const Component = ({ className, professionals }) => {
           </Grid>
         </Box>
       </Container>
-
-      {/* <Container maxWidth="lg">
-        <Box pt={4}>
-          <Grid container spacing={5} >
-            <Grid item xs={12} sm={6} md={3}>
-              {professionals.map(pro => (
-                <div key={pro.id}>
-                  <Card {...pro} />
-                </div>
-              ))}
-            </Grid>
-          </Grid>
-        </Box>
-      </Container> */}
-
     </div>
   );
 };
 
 Component.propTypes = {
-  professionals: PropTypes.node,
-  className: PropTypes.string,
+  professionals: PropTypes.array,
+  match: PropTypes.node,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, props) => ({
   professionals: getAllPros(state),
+  matchPro: getProById(state, props.match.params.proId),
 });
 
-const ComponentContainer = connect(mapStateToProps, /*mapDispatchToProps*/)(Component);
+// const mapDispatchToProps = dispatch => ({
+//   someAction: arg => dispatch(reduxActionCreator(arg)),
+// });
+
+const ComponentContainer = connect(mapStateToProps)(Component);
 
 export {
   Component as ProList,
