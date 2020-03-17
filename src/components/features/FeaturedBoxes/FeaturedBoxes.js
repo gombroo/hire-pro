@@ -47,7 +47,7 @@ const Component = ({ className, featured }) => {
         </Typography>
         <Box pt={4}>
           <Grid container minWidth="200" spacing={6} justify="center">
-            {featured.map(pro => (
+            {featured.slice(0, 4).map(pro => (
               <Grid item key={pro.id}>
                 <Card {...pro} />
               </Grid>

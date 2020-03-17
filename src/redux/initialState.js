@@ -8,7 +8,7 @@ export const initialState = {
       genre: 'rock',
       email: 'johnny@zamulony.com',
       rating: '4.5',
-      featured: true,
+      featured: false,
       price: '200 PLN',
       priceOption: {
         basic: '200 PLN',
@@ -46,7 +46,7 @@ export const initialState = {
       genre: 'death metal',
       email: 'ludwik@hendrix.com',
       rating: '1.5',
-      featured: false,
+      featured: true,
       price: '500 PLN',
       priceOption: {
         basic: '500 PLN',
