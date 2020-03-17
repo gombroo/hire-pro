@@ -35,49 +35,32 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Component = ({ className }) => {
+const Component = ({ className, featured }) => {
   const classes = useStyles();
 
   return (
     <div className={clsx(className, classes.root)}>
 
       <Container maxWidth="lg">
-        <Box pt={4}>
-          <Grid container minWidth="200" spacing={6} justify="center">
-            {/* {featured.map(pro => (
-              <Grid item key={pro.id}>
-                <Card {...pro} />
-              </Grid>
-            ))} */}
-          </Grid>
-        </Box>
-      </Container>
-
-      <Container maxWidth="lg">
         <Typography component="h2" variant="h4" align="center">
           Featured Musicians
         </Typography>
-        <Grid container spacing={5} className={classes.cards}>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card />
+        <Box pt={4}>
+          <Grid container minWidth="200" spacing={6} justify="center">
+            {featured.map(pro => (
+              <Grid item key={pro.id}>
+                <Card {...pro} />
+              </Grid>
+            ))}
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card />
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card />
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card />
-          </Grid>
-        </Grid>
+        </Box>
       </Container>
     </div>
   );
 };
 
 Component.propTypes = {
-  featuredPros: PropTypes.node,
+  featured: PropTypes.array,
   className: PropTypes.string,
 };
 

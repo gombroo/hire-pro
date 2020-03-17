@@ -3,12 +3,10 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { initialState } from './initialState';
-import { reducer as postsReducer } from './postsRedux';
 import { reducer as prosReducer } from './prosRedux';
 
 // define reducers
 const reducers = {
-  posts: postsReducer,
   pros: prosReducer,
 };
 
