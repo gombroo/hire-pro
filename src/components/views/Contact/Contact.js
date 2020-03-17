@@ -106,7 +106,6 @@ class Contact extends React.Component {
           </div>
         </Container>
       </div>
-
     );
   }
 }

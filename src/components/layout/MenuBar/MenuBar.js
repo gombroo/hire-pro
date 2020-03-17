@@ -17,7 +17,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1),
     borderRadius: 3,
     fontSize: 50,
-    color: '#ab003c',
+    color: theme.palette.primary.main,
     backgroundColor: theme.palette.secondary.main,
   },
   icons: {
@@ -67,9 +67,11 @@ const Component = ({className, children}) => {
           <Typography variant="h6" className={classes.title}>
             Hire Music Pro
           </Typography>
+
           <PageNav />
+
           <IconButton className={classes.icons} aria-label="search" color="inherit" >
-            <SearchIcon />
+            <ShoppingBasketIcon />
           </IconButton>
           <IconButton className={classes.icons}  edge="end" color="inherit">
             <AccountCircle />
