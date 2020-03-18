@@ -3,8 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
-import styles from './Contact.module.scss';
 
 // components
 
@@ -20,18 +18,9 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Container from '@material-ui/core/Container';
 import MailIcon from '@material-ui/icons/Mail';
 
-
 // redux
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
-
-// const Component = ({className, children}) => (
-//   <div className={clsx(className, styles.root)}>
-//     <h2>Contact</h2>
-//     {children}
-//   </div>
-// );
 
 const useStyles = theme => ({
   root: {
@@ -66,7 +55,7 @@ class Contact extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className={clsx(styles.root)}>
+      <div>
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <div className={classes.paper}>

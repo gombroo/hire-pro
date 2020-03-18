@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // styles
 import clsx from 'clsx';
@@ -15,7 +15,6 @@ import { StarRating } from '../../features/StarRating/StarRating';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container/Container';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
@@ -29,8 +28,8 @@ import ShareIcon from '@material-ui/icons/Share';
 import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
 // redux
-// import { connect } from 'react-redux';
-// import { getSingleProById /*, reduxActionCreator*/ } from '../../../redux/prosRedux.js';
+import { connect } from 'react-redux';
+import { getSingleProById /*, reduxActionCreator*/ } from '../../../redux/prosRedux.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -58,7 +57,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({children, className, name, instrument, genre, rating, price, descritpion, image, match }) => {
+const Component = ({ children, className, name, instrument, genre, rating, price, descritpion, image, match }) => {
   const classes = useStyles();
 
   return (
@@ -70,32 +69,33 @@ const Component = ({children, className, name, instrument, genre, rating, price,
         </Box>
       </Grid>
 
-      <Container maxWidth="lg">
-        <Box p={4}>
-          <Grid container spacing={3}  className={classes.mainGrid}>
-            <Grid item xs={12} sm={12} md={3} className={styles.info}>
-              <Card>
-                <CardMedia
-                  className={classes.media}
-                  image={image}
-                  title="Johny Zamulony"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h2">
+      <Box p={4}>
+        <Grid container spacing={3} className={classes.mainGrid}>
+
+          <Grid item xs={12} sm={12} md={3} className={styles.info}>
+            <Card>
+              <CardMedia
+                className={classes.media}
+                image={image}
+                title="Johny Zamulony"
+              />
+
+              <CardContent>
+                <Typography variant="h5" component="h2">
                   Johnny Zamulony
-                    {name}
-                  </Typography>
-                  <Typography color="textSecondary">
-                    drummer
-                    {instrument}
-                  </Typography>
-                  <Typography variant="button" component="p">
-                    Genres: rock, jazz<br/>
-                    {genre}
-                  </Typography>
-                  <StarRating />
-                  {rating}
-                  {/* <Typography variant="h4" component="p">
+                  {name}
+                </Typography>
+                <Typography color="textSecondary">
+                  drummer
+                  {instrument}
+                </Typography>
+                <Typography variant="button" component="p">
+                  Genres: rock, jazz<br />
+                  {genre}
+                </Typography>
+                <StarRating />
+                {rating}
+                {/* <Typography variant="h4" component="p">
                     <StarIcon color="primary"/>
                     <StarIcon color="primary"/>
                     <StarIcon color="primary"/>
@@ -103,88 +103,87 @@ const Component = ({children, className, name, instrument, genre, rating, price,
                     <StarBorderIcon color="primary"/>
                     <StarBorderIcon color="primary"/>
                   </Typography> */}
-                </CardContent>
-                <CardActions>
-                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Contact</Button>
-                  <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                  </IconButton>
-                  <IconButton aria-label="share">
-                    <ShareIcon />
-                  </IconButton>
-                </CardActions>
-              </Card>
-            </Grid>
-
-            <Grid item xs={12} sm={12} md={6} className={styles.description}>
-              <Card>
-                <CardContent>
-                  {descritpion}
-                  <br/>
-                  <Typography paragraph>
-                    Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-                    heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-                    browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-                    and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-                    pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-                    saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                  </Typography>
-                  <Typography paragraph>
-                    Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-                    without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-                    medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-                    again without stirring, until mussels have opened and rice is just tender, 5 to 7
-                    minutes more. (Discard any mussels that don’t open.)
-                  </Typography>
-                </CardContent>
-              </Card>
-              <br/>
-              <Card>
-                <MusicPlayer />
-              </Card>
-            </Grid>
-
-            <Grid item xs={12} sm={12} md={3} className={styles.prices}>
-              <Card>
-                <CardContent>
-                  <Typography variant='button'>Basic Price: {price} 200 PLN</Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    Includes separate drum tracks in mp3 format.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Basic</Button>
-                </CardActions>
-
-                <CardContent>
-                  <Typography variant='button'>Standard Price: {price} 300 PLN</Typography>
-                  <br/>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    Includes separate tracks in wav format.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Standard</Button>
-                </CardActions>
-
-                <CardContent>
-                  <Typography variant='button'>Premium Price: {price} 500 PLN</Typography>
-                  <br/>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    Includes separate tracks in WAV format, mixed drums.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">
-                    <Link to={`/order`}>Order Premium</Link>
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-
+              </CardContent>
+              <CardActions>
+                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Contact</Button>
+                <IconButton aria-label="add to favorites">
+                  <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <ShareIcon />
+                </IconButton>
+              </CardActions>
+            </Card>
           </Grid>
-        </Box>
-      </Container>
+
+          <Grid item xs={12} sm={12} md={6} className={styles.description}>
+            <Card>
+              <CardContent>
+                {descritpion}
+                <br />
+                <Typography paragraph>
+                  Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
+                  heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
+                  browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
+                  and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
+                  pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
+                  saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+                </Typography>
+                <Typography paragraph>
+                  Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
+                  without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
+                  medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
+                  again without stirring, until mussels have opened and rice is just tender, 5 to 7
+                  minutes more. (Discard any mussels that don’t open.)
+                </Typography>
+              </CardContent>
+            </Card>
+            <br />
+            <Card>
+              <MusicPlayer />
+            </Card>
+          </Grid>
+
+          <Grid item xs={12} sm={12} md={3} className={styles.prices}>
+            <Card>
+              <CardContent>
+                <Typography variant='button'>Basic Price: {price} 200 PLN</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Includes separate drum tracks in mp3 format.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Basic</Button>
+              </CardActions>
+
+              <CardContent>
+                <Typography variant='button'>Standard Price: {price} 300 PLN</Typography>
+                <br />
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Includes separate tracks in wav format.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Standard</Button>
+              </CardActions>
+
+              <CardContent>
+                <Typography variant='button'>Premium Price: {price} 500 PLN</Typography>
+                <br />
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Includes separate tracks in WAV format, mixed drums.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">
+                  <NavLink to={`/order`}>Order Premium</NavLink>
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
+        </Grid>
+      </Box>
     </div>
   );
 };
@@ -203,19 +202,18 @@ Component.propTypes = {
   match: PropTypes.object,
 };
 
-// const mapStateToProps = (state) => ({
-//   singlePro: getSingleProById(state),
-// });
-
+const mapStateToProps = (state, props) => ({
+  singlePro: getSingleProById(state, props.match.params.id),
+});
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-// const ComponentContainer = connect(mapStateToProps)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
   Component as ProPage,
-  // ComponentContainer as ProPageContainer,
-  Component as ProPageComponent,
+  Container as ProPageContainer,
+  // Component as ProPageComponent,
 };

@@ -32,10 +32,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
-    // [theme.breakpoints.down('sm')]: {
-    //   display: 'flex',
-    //   color: theme.palette.secondary.main,
-    // },
   },
   link: {
     borderWidth: 2,
@@ -44,7 +40,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({ className, children }) => {
+const Component = () => {
   const classes = useStyles();
 
   return (
@@ -55,24 +51,28 @@ const Component = ({ className, children }) => {
       <nav className={clsx(classes.link, classes.navigation)}>
         <Button
           color="inherit"
+          activeClassName='active'
           component={NavLink}
           exact to={`${process.env.PUBLIC_URL}/`}>
           Home
         </Button>
         <Button
           color="inherit"
+          activeClassName='active'
           component={NavLink}
           to={`${process.env.PUBLIC_URL}/professionals`} >
           All Pros
         </Button>
         <Button
           color="inherit"
+          activeClassName='active'
           component={NavLink}
-          to={`${process.env.PUBLIC_URL}/pro/:proId`}>
+          to={`${process.env.PUBLIC_URL}/pro/:id`}>
           Pro Page
         </Button>
         <Button
           color="inherit"
+          activeClassName='active'
           component={NavLink}
           to={`${process.env.PUBLIC_URL}/order`}>
           Order
@@ -80,6 +80,7 @@ const Component = ({ className, children }) => {
         <Button
           className={classes.link}
           color="inherit"
+          activeClassName='active'
           component={NavLink}
           to={`${process.env.PUBLIC_URL}/contact`}>
           Contact
@@ -107,7 +108,6 @@ const Component = ({ className, children }) => {
 
 Component.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({
@@ -122,6 +122,6 @@ Component.propTypes = {
 
 export {
   Component as PageNav,
-  // ComponentContainer as PageNav,
+  // ComponentContainer as PageNavContainer,
   Component as PageNavComponent,
 };

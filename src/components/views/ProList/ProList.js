@@ -9,7 +9,6 @@ import { Card } from '../../common/Card/Card';
 
 // material-ui
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -17,7 +16,7 @@ import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
 // redux
 import { connect } from 'react-redux';
-import { getAllPros, getProById } from '../../../redux/prosRedux.js';
+import { getAllPros } from '../../../redux/prosRedux.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,11 +35,9 @@ const useStyles = makeStyles(theme => ({
 const Component = ({
   professionals,
   match: {
-    params: { proId },
+    params: { id },
   },
-}) =>
-
-{
+}) => {
   const classes = useStyles();
 
   return (
@@ -51,40 +48,37 @@ const Component = ({
           <Typography variant="h5">All Professionals</Typography>
         </Box>
       </Grid>
-
-      <Container maxWidth="lg">
-        <Box pt={4}>
-          <Grid container spacing={6} justify="center">
-            {professionals.map(pro => (
-              <Grid item key={pro.id}>
-                <Card {...pro} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </Container>
+      <Box pt={4}>
+        <Grid container spacing={6} justify="center">
+          {professionals.map(pro => (
+            <Grid item key={pro.id}>
+              <Card {...pro} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </div>
   );
 };
 
 Component.propTypes = {
   professionals: PropTypes.array,
-  match: PropTypes.node,
+  match: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => ({
   professionals: getAllPros(state),
-  matchPro: getProById(state, props.match.params.proId),
+  //singlePro: getSingleProById(state, props.match.params.id),
 });
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-const ComponentContainer = connect(mapStateToProps)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
   Component as ProList,
-  ComponentContainer as ProListContainer,
-  Component as ProListComponent,
+  Container as ProListContainer,
+  //Component as ProListComponent,
 };

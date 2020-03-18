@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 
 // styles
-import clsx from 'clsx';
-import styles from './MenuBar.module.scss';
 
 // components
 import { PageNav } from '../PageNav/PageNav';
@@ -24,7 +22,6 @@ import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 // redux
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,11 +49,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({className, children}) => {
+
+const Component = () => {
   const classes = useStyles();
 
   return(
-    <div className={clsx(className, styles.root)}>
+    <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <RouterLink to="/" color="inherit">
@@ -84,11 +82,10 @@ const Component = ({className, children}) => {
 
 Component.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export {
   Component as MenuBar,
-  // Container as Footer,
+  // Container as MenuBar,
   Component as MenuBarComponent,
 };

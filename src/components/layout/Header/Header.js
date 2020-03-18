@@ -1,6 +1,6 @@
 // react
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 // styles
 import styles from './Header.module.scss';
@@ -15,25 +15,15 @@ import { MenuBar } from '../MenuBar/MenuBar';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 
-const Component = () => (
-  <div className={styles.root}>
+const Component = props => (
+  <header className={styles.root}>
     <MenuBar />
-  </div>
+  </header>
 );
 
-Component.propTypes = {
-  children: PropTypes.node,
-};
-
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+// Component.propTypes = {
+//   children: PropTypes.node,
+// };
 
 export {
   Component as Header,

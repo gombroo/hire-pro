@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // styles
-import clsx from 'clsx';
 import styles from './Homepage.module.scss';
 
 // components
@@ -18,8 +17,8 @@ import { FeaturedBoxesContainer } from '../../features/FeaturedBoxes/FeaturedBox
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 
-const Component = ({ className, children }) => (
-  <div className={clsx(className, styles.root)}>
+const Component = () => (
+  <div className={styles.root}>
     <Hero />
     <FeaturedBoxesContainer />
     <Instruments />
@@ -28,7 +27,6 @@ const Component = ({ className, children }) => (
 
 Component.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({
