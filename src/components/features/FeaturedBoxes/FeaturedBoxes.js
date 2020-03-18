@@ -9,7 +9,6 @@ import { Card } from '../../common/Card/Card';
 
 // material-ui
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container/';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -38,20 +37,18 @@ const Component = ({ featured }) => {
 
   return (
     <div className={classes.root}>
-      <Container>
-        <Typography component="h2" variant="h4" align="center">
-          Featured Musicians
-        </Typography>
-        <Box pt={4}>
-          <Grid container spacing={6} justify="center">
-            {featured.slice(0, 4).map(pro => (
-              <Grid item key={pro.id}>
-                <Card {...pro} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </Container>
+      <Typography component="h2" variant="h4" align="center">
+        Featured Musicians
+      </Typography>
+      <Box pt={4}>
+        <Grid container spacing={6} justify="center">
+          {featured.slice(0, 4).map(pro => (
+            <Grid item key={pro.id}>
+              <Card {...pro} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </div>
   );
 };
@@ -68,10 +65,10 @@ const mapStateToProps = state => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-const ComponentContainer = connect(mapStateToProps)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
   Component as FeaturedBoxes,
-  ComponentContainer as FeaturedBoxesContainer,
-  Component as FeaturedBoxesComponent,
+  Container as FeaturedBoxesContainer,
+  //Component as FeaturedBoxesComponent,
 };

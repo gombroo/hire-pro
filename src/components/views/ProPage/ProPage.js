@@ -57,7 +57,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({ children, className, name, instrument, genre, rating, price, descritpion, image, match }) => {
+const Component = ({ children, className, name, instrument, genre, rating, price, descritpion, image,
+  match: {
+    params: { id },
+  },
+}) => {
   const classes = useStyles();
 
   return (
@@ -199,7 +203,7 @@ Component.propTypes = {
   descritpion: PropTypes.string,
   rating: PropTypes.string,
   featured: PropTypes.bool,
-  match: PropTypes.object,
+  match: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => ({

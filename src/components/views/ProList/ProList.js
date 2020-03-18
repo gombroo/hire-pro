@@ -32,12 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Component = ({
-  professionals,
-  match: {
-    params: { id },
-  },
-}) => {
+const Component = ({ professionals }) => {
   const classes = useStyles();
 
   return (
@@ -49,6 +44,7 @@ const Component = ({
         </Box>
       </Grid>
       <Box pt={4}>
+
         <Grid container spacing={6} justify="center">
           {professionals.map(pro => (
             <Grid item key={pro.id}>
@@ -56,6 +52,7 @@ const Component = ({
             </Grid>
           ))}
         </Grid>
+
       </Box>
     </div>
   );
@@ -63,12 +60,10 @@ const Component = ({
 
 Component.propTypes = {
   professionals: PropTypes.array,
-  match: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => ({
   professionals: getAllPros(state),
-  //singlePro: getSingleProById(state, props.match.params.id),
 });
 
 // const mapDispatchToProps = dispatch => ({

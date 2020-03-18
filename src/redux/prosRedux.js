@@ -7,6 +7,12 @@ export const getFeatured = ({ pros }) =>
 export const getSingleProById = ({pros},  id) =>
   pros.filter(pro => pro.id === id);
 
+export const getInstrument = ({pros}, instrument) =>
+  pros.filter(pro => pro.instrument === instrument);
+
+// export const getProsByCategory = ({ pros }, categoryId) =>
+//   categoryId ? pros.filter(pro => pro.category === categoryId) : pros;
+
 // export const getAllInstruments =({pros}) => pros.instrument;
 // export const getAllMusicians = ({pros}) => pros.filter(pro => pro.category = 'musician');
 
