@@ -60,7 +60,7 @@ const Component = () => {
           color="inherit"
           activeClassName='active'
           component={NavLink}
-          to={`${process.env.PUBLIC_URL}/professionals`} >
+          to={`${process.env.PUBLIC_URL}/pros`} >
           All Pros
         </Button>
         <Button

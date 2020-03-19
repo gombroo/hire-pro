@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Johnny Zamulony",
+    "category": "musician",
+    "instrument": "drums",
+    "genre": "rock",
+    "email": "johnny@zamulony.com",
+    "rating": "4.5",
+    "featured": false,
+    "price": "200 PLN",
+    "priceOption": {
+      "basic": "200 PLN",
+      "standard": "400 PLN",
+      "premium": "600 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/876714/pexels-photo-876714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Samanta Foxxx",
+    "category": "musician",
+    "instrument": "singer",
+    "genre": "pop",
+    "email": "samanta@foxxx.com",
+    "rating": "2.5",
+    "featured": false,
+    "price": "100 PLN",
+    "priceOption": {
+      "basic": "100 PLN",
+      "standard": "300 PLN",
+      "premium": "500 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/3775131/pexels-photo-3775131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Ludwik Hendrix",
+    "category": "musician",
+    "instrument": "guitar",
+    "genre": "death metal",
+    "email": "ludwik@hendrix.com",
+    "rating": "1.5",
+    "featured": true,
+    "price": "500 PLN",
+    "priceOption": {
+      "basic": "500 PLN",
+      "standard": "700 PLN",
+      "premium": "1200 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/2231747/pexels-photo-2231747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Tadek Niejadek",
+    "category": "musician",
+    "instrument": "guitar",
+    "genre": "folk",
+    "email": "tadek@niejadek.com",
+    "rating": "1.5",
+    "featured": false,
+    "price": "50 PLN",
+    "priceOption": {
+      "basic": "50 PLN",
+      "standard": "700 PLN",
+      "premium": "200 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/3853886/pexels-photo-3853886.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Antonio Macierewicz",
+    "category": "musician",
+    "instrument": "bass",
+    "genre": "progressive",
+    "email": "anthony@macierewicz.gov.pl",
+    "rating": "0.0",
+    "featured": false,
+    "price": "10 PLN",
+    "priceOption": {
+      "basic": "10 PLN",
+      "standard": "20 PLN",
+      "premium": "30 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/1813124/pexels-photo-1813124.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Scooby Dooby Doo",
+    "category": "musician",
+    "instrument": "DJ",
+    "genre": "house",
+    "email": "scooby@dooby.com",
+    "rating": "0.0",
+    "featured": true,
+    "price": "300 PLN",
+    "priceOption": {
+      "basic": "300 PLN",
+      "standard": "500 PLN",
+      "premium": "700 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/1716398/pexels-photo-1716398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Johnny Martyniuk",
+    "category": "musician",
+    "instrument": "guitar",
+    "genre": "disco-polo",
+    "email": "johnny@martyniuk.com",
+    "rating": "5.0",
+    "featured": true,
+    "price": "50000 PLN",
+    "priceOption": {
+      "basic": "50000 PLN",
+      "standard": "70000 PLN",
+      "premium": "90000 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/1551018/pexels-photo-1551018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Sławomir Kloc",
+    "category": "musician",
+    "instrument": "piano",
+    "genre": "jazz",
+    "email": "slawomir@kloc.com",
+    "rating": "3.5",
+    "featured": true,
+    "price": "250 PLN",
+    "priceOption": {
+      "basic": "250 PLN",
+      "standard": "350 PLN",
+      "premium": "450 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/743728/pexels-photo-743728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Arkadiusz Trąba",
+    "category": "musician",
+    "instrument": "saxophone",
+    "genre": "funk",
+    "email": "arkadiusz@traba.com",
+    "rating": "4.5",
+    "featured": false,
+    "price": "350 PLN",
+    "priceOption": {
+      "basic": "350 PLN",
+      "standard": "550 PLN",
+      "premium": "650 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/733767/pexels-photo-733767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  },
+  {
+    "name": "Dżesika Grapelli",
+    "category": "musician",
+    "instrument": "violin",
+    "genre": "classical",
+    "email": "jessica@grapelli.com",
+    "rating": "4.5",
+    "featured": false,
+    "price": "550 PLN",
+    "priceOption": {
+      "basic": "550 PLN",
+      "standard": "750 PLN",
+      "premium": "950 PLN"
+    },
+    "image": "https: //images.pexels.com/photos/1384867/pexels-photo-1384867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+  }
+]

@@ -12,7 +12,7 @@ import { CssBaseline } from '@material-ui/core';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
 import { ProListContainer } from './components/views/ProList/ProList';
-import { ProPage } from './components/views/ProPage/ProPage';
+import { ProPageContainer } from './components/views/ProPage/ProPage';
 
 import { Order } from './components/views/Order/Order';
 import { NotFound } from './components/views/NotFound/NotFound';
@@ -48,8 +48,8 @@ const App = () => (
           <MainLayout>
             <Switch>
               <Route exact path='/' component={Homepage} />
-              <Route exact path={'/professionals'} component={ProListContainer} />
-              <Route exact path={'/pro/:id'} component={ProPage} />
+              <Route exact path={'/pros'} component={ProListContainer} />
+              <Route exact path={'/pro/:id'} component={ProPageContainer} />
               <Route exact path={'/order'} component={Order} />
               <Route exact path={'/prologin'} component={ProLogin} />
               <Route exact path={'/prosignup'} component={ProSignup} />
