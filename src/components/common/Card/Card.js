@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // styles
 
@@ -19,7 +19,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import IconButton from '@material-ui/core/IconButton';
-
 
 // redux
 import { connect } from 'react-redux';
@@ -76,7 +75,7 @@ const Component = ({ name, id, instrument, genre, price, image }) => {
           <Button size="small" fullWidth variant="outlined" color="inherit">
             <Link className={classes.link} to={`/pro/${id}`}>More Info</Link>
           </Button>
-          <Button  size="small" variant="contained" color="primary" className={classes.button}>
+          <Button size="small" variant="contained" color="primary" className={classes.button}>
             <Link className={classes.link} to={`/order`}>Order</Link>
           </Button>
           <IconButton color="primary" aria-label="add to shopping cart">
@@ -110,5 +109,5 @@ const Container = connect(mapStateToProps)(Component);
 export {
   Component as Card,
   Container as CardContainer,
-  Component as CardComponent,
+  // Component as CardComponent,
 };

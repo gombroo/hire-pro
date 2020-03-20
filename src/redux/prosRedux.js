@@ -1,5 +1,3 @@
-import Axios from 'axios';
-
 /* selectors */
 export const getAllPros = ({pros}) => pros;
 
@@ -7,6 +5,7 @@ export const getFeatured = ({ pros }) =>
   pros.filter(pro => pro.featured === true);
 
 export const getSingleProById = ({pros},  proId) =>
+// eslint-disable-next-line
   pros.filter(pro => pro.id == proId);
 
 export const getInstrument = ({pros}, instrument) =>
@@ -33,36 +32,6 @@ export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
 
 /* thunk creators */
-export const fetchAllPros = () => {
-  return (dispatch, getState) => {
-    dispatch(fetchStarted());
-
-    Axios
-      .get('http://localhost:8000/api/pros')
-      .then(res => {
-        dispatch(fetchSuccess(res.data));
-      })
-      .catch(err => {
-        dispatch(fetchError(err.message || true));
-      });
-  };
-};
-
-export const fetchSinglePro = ( id ) => {
-  return (dispatch, getState) => {
-    dispatch(fetchStarted());
-
-    Axios
-      .get(`http://localhost:8000/api/pros/${id}`)
-      .then(res => {
-        dispatch(fetchSuccess(res.data));
-      })
-      .catch(err => {
-        dispatch(fetchError(err.message || true));
-      });
-  };
-};
-
 
 /* reducer */
 export const reducer = (statePart = [], action = {}) => {

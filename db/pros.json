@@ -1,5 +1,5 @@
 [
-  {
+  { "id": "1",
     "name": "Johnny Zamulony",
     "category": "musician",
     "instrument": "drums",
@@ -14,9 +14,10 @@
       "premium": "600 PLN"
     },
     "image": "https: //images.pexels.com/photos/876714/pexels-photo-876714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "2",
     "name": "Samanta Foxxx",
     "category": "musician",
     "instrument": "singer",
@@ -31,9 +32,10 @@
       "premium": "500 PLN"
     },
     "image": "https: //images.pexels.com/photos/3775131/pexels-photo-3775131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "3",
     "name": "Ludwik Hendrix",
     "category": "musician",
     "instrument": "guitar",
@@ -48,9 +50,10 @@
       "premium": "1200 PLN"
     },
     "image": "https: //images.pexels.com/photos/2231747/pexels-photo-2231747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "4",
     "name": "Tadek Niejadek",
     "category": "musician",
     "instrument": "guitar",
@@ -65,9 +68,10 @@
       "premium": "200 PLN"
     },
     "image": "https: //images.pexels.com/photos/3853886/pexels-photo-3853886.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "5",
     "name": "Antonio Macierewicz",
     "category": "musician",
     "instrument": "bass",
@@ -82,9 +86,10 @@
       "premium": "30 PLN"
     },
     "image": "https: //images.pexels.com/photos/1813124/pexels-photo-1813124.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "6",
     "name": "Scooby Dooby Doo",
     "category": "musician",
     "instrument": "DJ",
@@ -99,9 +104,10 @@
       "premium": "700 PLN"
     },
     "image": "https: //images.pexels.com/photos/1716398/pexels-photo-1716398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "7",
     "name": "Johnny Martyniuk",
     "category": "musician",
     "instrument": "guitar",
@@ -116,9 +122,10 @@
       "premium": "90000 PLN"
     },
     "image": "https: //images.pexels.com/photos/1551018/pexels-photo-1551018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "8",
     "name": "Sławomir Kloc",
     "category": "musician",
     "instrument": "piano",
@@ -133,9 +140,10 @@
       "premium": "450 PLN"
     },
     "image": "https: //images.pexels.com/photos/743728/pexels-photo-743728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "9",
     "name": "Arkadiusz Trąba",
     "category": "musician",
     "instrument": "saxophone",
@@ -150,9 +158,10 @@
       "premium": "650 PLN"
     },
     "image": "https: //images.pexels.com/photos/733767/pexels-photo-733767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   },
   {
+    "id": "10",
     "name": "Dżesika Grapelli",
     "category": "musician",
     "instrument": "violin",
@@ -167,6 +176,6 @@
       "premium": "950 PLN"
     },
     "image": "https: //images.pexels.com/photos/1384867/pexels-photo-1384867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "decription": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
+    "description": "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
   }
 ]

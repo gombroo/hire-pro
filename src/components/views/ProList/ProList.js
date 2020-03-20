@@ -16,7 +16,7 @@ import HeadsetOutlinedIcon from '@material-ui/icons/HeadsetOutlined';
 
 // redux
 import { connect } from 'react-redux';
-import { getAllPros, fetchAllPros } from '../../../redux/prosRedux.js';
+import { getAllPros } from '../../../redux/prosRedux.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,7 +52,6 @@ const Component = ({ professionals }) => {
             </Grid>
           ))}
         </Grid>
-
       </Box>
     </div>
   );
@@ -66,11 +65,7 @@ const mapStateToProps = (state, props) => ({
   professionals: getAllPros(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchPros: () => fetchAllPros(),
-});
-
-const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
   Component as ProList,
