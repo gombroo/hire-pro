@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // styles
 import clsx from 'clsx';
@@ -49,67 +49,71 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     fontWeight: 'bold',
   },
-  mainGrid: {
-    display: 'flex',
-  },
   button: {
     boxShadow: 'none',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
 }));
 
-const Component = ({ children, className, name, instrument, genre, rating, price, descritpion, image,
+const Component = ({
+  singlePro,
   match: {
-    params: { id },
+    params: { proId },
   },
 }) => {
   const classes = useStyles();
+  const {
+    name,
+    instrument,
+    genre,
+    rating,
+    price,
+    description,
+    image,
+    email,
+  } = singlePro[0];
 
   return (
-    <div className={clsx(className, styles.root)}>
+    <div className={clsx(styles.root)}>
       <Grid item xs={12}>
         <Box className={classes.pageHeader} p={2}>
           <HeadsetOutlinedIcon />
-          <Typography variant="h5">{name}Pro Page</Typography>
+          <Typography variant="h5">
+            {name}
+          </Typography>
         </Box>
       </Grid>
 
-      <Box p={4}>
-        <Grid container spacing={3} className={classes.mainGrid}>
+      <Box p={4}  display="flex" justifyContent="center">
+        <Grid container spacing={3} lg={10} >
 
           <Grid item xs={12} sm={12} md={3} className={styles.info}>
             <Card>
               <CardMedia
                 className={classes.media}
                 image={image}
-                title="Johny Zamulony"
+                title={`${name}`}
               />
-
               <CardContent>
                 <Typography variant="h5" component="h2">
-                  Johnny Zamulony
                   {name}
                 </Typography>
                 <Typography color="textSecondary">
-                  drummer
                   {instrument}
                 </Typography>
                 <Typography variant="button" component="p">
-                  Genres: rock, jazz<br />
                   {genre}
                 </Typography>
                 <StarRating />
                 {rating}
-                {/* <Typography variant="h4" component="p">
-                    <StarIcon color="primary"/>
-                    <StarIcon color="primary"/>
-                    <StarIcon color="primary"/>
-                    <StarBorderIcon color="primary"/>
-                    <StarBorderIcon color="primary"/>
-                    <StarBorderIcon color="primary"/>
-                  </Typography> */}
               </CardContent>
               <CardActions>
-                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Contact</Button>
+                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">
+                  <a className={classes.link} href={`mailto:${email}`}>Contact</a>
+                </Button>
                 <IconButton aria-label="add to favorites">
                   <FavoriteIcon />
                 </IconButton>
@@ -123,22 +127,8 @@ const Component = ({ children, className, name, instrument, genre, rating, price
           <Grid item xs={12} sm={12} md={6} className={styles.description}>
             <Card>
               <CardContent>
-                {descritpion}
-                <br />
                 <Typography paragraph>
-                  Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-                  heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-                  browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-                  and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-                  pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-                  saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                </Typography>
-                <Typography paragraph>
-                  Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-                  without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-                  medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-                  again without stirring, until mussels have opened and rice is just tender, 5 to 7
-                  minutes more. (Discard any mussels that don’t open.)
+                  {description}
                 </Typography>
               </CardContent>
             </Card>
@@ -151,28 +141,32 @@ const Component = ({ children, className, name, instrument, genre, rating, price
           <Grid item xs={12} sm={12} md={3} className={styles.prices}>
             <Card>
               <CardContent>
-                <Typography variant='button'>Basic Price: {price} 200 PLN</Typography>
+                <Typography variant='button'>Basic Price: {price}</Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   Includes separate drum tracks in mp3 format.
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Basic</Button>
+                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">
+                  <Link className={classes.link} to={`/order`}>Order Basic</Link>
+                </Button>
               </CardActions>
 
               <CardContent>
-                <Typography variant='button'>Standard Price: {price} 300 PLN</Typography>
+                <Typography variant='button'>Standard Price: {price}</Typography>
                 <br />
                 <Typography variant="body2" color="textSecondary" component="p">
                   Includes separate tracks in wav format.
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">Order Standard</Button>
+                <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">
+                  <Link className={classes.link} to={`/order`}>Order Standard</Link>
+                </Button>
               </CardActions>
 
               <CardContent>
-                <Typography variant='button'>Premium Price: {price} 500 PLN</Typography>
+                <Typography variant='button'>Premium Price: {price}</Typography>
                 <br />
                 <Typography variant="body2" color="textSecondary" component="p">
                   Includes separate tracks in WAV format, mixed drums.
@@ -180,7 +174,7 @@ const Component = ({ children, className, name, instrument, genre, rating, price
               </CardContent>
               <CardActions>
                 <Button className={classes.button} size="small" fullWidth variant="contained" color="primary">
-                  <NavLink to={`/order`}>Order Premium</NavLink>
+                  <Link className={classes.link} to={`/order`}>Order Premium</Link>
                 </Button>
               </CardActions>
             </Card>
@@ -193,17 +187,17 @@ const Component = ({ children, className, name, instrument, genre, rating, price
 };
 
 Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
+  singlePro: PropTypes.array,
+  match: PropTypes.object,
   name: PropTypes.string,
   image: PropTypes.string,
   genre: PropTypes.string,
   price: PropTypes.number,
   instrument: PropTypes.string,
-  descritpion: PropTypes.string,
+  description: PropTypes.string,
   rating: PropTypes.string,
   featured: PropTypes.bool,
-  match: PropTypes.func,
+  email: PropTypes.string,
 };
 
 const mapStateToProps = (state, props) => ({

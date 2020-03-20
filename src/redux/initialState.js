@@ -16,8 +16,8 @@ export const initialState = {
         premium: '600 PLN',
       },
       image: 'https://images.pexels.com/photos/876714/pexels-photo-876714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 2,
@@ -35,8 +35,8 @@ export const initialState = {
         premium: '500 PLN',
       },
       image: 'https://images.pexels.com/photos/3775131/pexels-photo-3775131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 3,
@@ -54,8 +54,8 @@ export const initialState = {
         premium: '1200 PLN',
       },
       image: 'https://images.pexels.com/photos/2231747/pexels-photo-2231747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 4,
@@ -73,8 +73,8 @@ export const initialState = {
         premium: '200 PLN',
       },
       image: 'https://images.pexels.com/photos/3853886/pexels-photo-3853886.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 5,
@@ -92,8 +92,8 @@ export const initialState = {
         premium: '30 PLN',
       },
       image: 'https://images.pexels.com/photos/1813124/pexels-photo-1813124.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 6,
@@ -111,8 +111,8 @@ export const initialState = {
         premium: '700 PLN',
       },
       image: 'https://images.pexels.com/photos/1716398/pexels-photo-1716398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 7,
@@ -130,8 +130,8 @@ export const initialState = {
         premium: '90000 PLN',
       },
       image: 'https://images.pexels.com/photos/1551018/pexels-photo-1551018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 8,
@@ -149,8 +149,8 @@ export const initialState = {
         premium: '450 PLN',
       },
       image: 'https://images.pexels.com/photos/743728/pexels-photo-743728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 9,
@@ -168,8 +168,8 @@ export const initialState = {
         premium: '650 PLN',
       },
       image: 'https://images.pexels.com/photos/733767/pexels-photo-733767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
     {
       id: 10,
@@ -187,8 +187,8 @@ export const initialState = {
         premium: '950 PLN',
       },
       image: 'https://images.pexels.com/photos/1384867/pexels-photo-1384867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      decription:
-      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.',
+      description:
+      'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. Donec dictum, massa vitae ultrices mollis, ex orci scelerisque eros, vitae ultricies arcu purus nec dui. Nam ut risus sit amet ante iaculis dapibus. Nunc mattis, mi sit amet mollis accumsan, lacus purus mollis orci, et rhoncus purus neque vitae tellus. Sed vitae dui id metus viverra posuere. Nulla suscipit sollicitudin vestibulum. Sed ac ante commodo libero sollicitudin venenatis lacinia aliquam elit. Fusce et sodales tortor, quis pellentesque lorem. Etiam sit amet tincidunt orci. Duis facilisis sem a neque luctus, a maximus magna imperdiet. Donec pretium quis diam vel accumsan. In volutpat tincidunt fermentum. Donec arcu eros, congue et eros vitae, hendrerit ornare nisl. Vestibulum pharetra justo non placerat sollicitudin. Aliquam vel dui elit. Aenean et nibh ac eros lobortis maximus. Curabitur egestas in est a commodo. Nunc mattis dapibus venenatis. Donec dapibus orci in nisl tristique aliquam. Praesent egestas imperdiet mattis. Nullam elementum a nibh vitae bibendum. Vivamus dapibus lectus ut est ultrices, vitae laoreet nisi venenatis. Aliquam in pulvinar massa. Nullam vel vulputate orci, at finibus turpis. Suspendisse tincidunt congue lorem dapibus ornare. Phasellus laoreet vel mauris at tempus. Proin vitae semper enim. Nam eget suscipit tellus, a bibendum est.',
     },
   ],
   navCategories: [

@@ -6,8 +6,8 @@ export const getAllPros = ({pros}) => pros;
 export const getFeatured = ({ pros }) =>
   pros.filter(pro => pro.featured === true);
 
-export const getSingleProById = ({pros},  id) =>
-  pros.filter(pro => pro.id == id);
+export const getSingleProById = ({pros},  proId) =>
+  pros.filter(pro => pro.id == proId);
 
 export const getInstrument = ({pros}, instrument) =>
   pros.filter(pro => pro.instrument === instrument);

@@ -1,6 +1,7 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // styles
 import clsx from 'clsx';
@@ -25,6 +26,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.secondary.main,
     boxShadow: 'none',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
 }));
 
 const Component = ({ className }) => {
@@ -43,7 +48,7 @@ const Component = ({ className }) => {
                 size="lg"
                 variant="contained"
               >
-                Register and get new jobs
+                <Link className={classes.link} to={`/prosignup`}>Register and get new jobs</Link>
               </Button>
             </Grid>
             <Grid item xs={12} sm={6}>

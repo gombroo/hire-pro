@@ -51,6 +51,7 @@ const useStyles = makeStyles(theme => ({
 
 
 const Component = () => {
+
   const classes = useStyles();
   const theme = useTheme();
 
@@ -62,7 +63,7 @@ const Component = () => {
             Bum, bum, bum
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
-            Johnny Zamulony
+            Artist Name
           </Typography>
         </CardContent>
         <div className={classes.controls}>

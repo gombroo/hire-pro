@@ -1,6 +1,7 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 // styles
 
@@ -19,6 +20,7 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import IconButton from '@material-ui/core/IconButton';
 
+
 // redux
 import { connect } from 'react-redux';
 import { getSingleProById } from '../../../redux/prosRedux.js';
@@ -34,10 +36,14 @@ const useStyles = makeStyles(theme => ({
   button: {
     boxShadow: 'none',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
 }));
 
 
-const Component = ({name, instrument, genre, price, image }) => {
+const Component = ({ name, id, instrument, genre, price, image }) => {
   const classes = useStyles();
 
   return (
@@ -45,6 +51,7 @@ const Component = ({name, instrument, genre, price, image }) => {
       <Card className={classes.root} variant="outlined">
         <CardActionArea>
           <CardMedia
+            component="img"
             className={classes.media}
             image={image}
             title="Musician Photo"
@@ -57,7 +64,7 @@ const Component = ({name, instrument, genre, price, image }) => {
               {instrument}
             </Typography>
             <Typography variant="subtitle1" component="p">
-              { price }
+              {price}
             </Typography>
             <Typography variant="button" component="p">
               {genre}
@@ -66,8 +73,12 @@ const Component = ({name, instrument, genre, price, image }) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" fullWidth variant="outlined" color="inherit">More Info</Button>
-          <Button  size="small" variant="contained" color="primary" className={classes.button}>Order</Button>
+          <Button size="small" fullWidth variant="outlined" color="inherit">
+            <Link className={classes.link} to={`/pro/${id}`}>More Info</Link>
+          </Button>
+          <Button  size="small" variant="contained" color="primary" className={classes.button}>
+            <Link className={classes.link} to={`/order`}>Order</Link>
+          </Button>
           <IconButton color="primary" aria-label="add to shopping cart">
             <FavoriteBorderIcon />
           </IconButton>
@@ -78,6 +89,7 @@ const Component = ({name, instrument, genre, price, image }) => {
 };
 
 Component.propTypes = {
+  id: PropTypes.string,
   name: PropTypes.string,
   image: PropTypes.string,
   genre: PropTypes.string,

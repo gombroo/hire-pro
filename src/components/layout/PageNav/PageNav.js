@@ -67,13 +67,6 @@ const Component = () => {
           color="inherit"
           activeClassName='active'
           component={NavLink}
-          to={`${process.env.PUBLIC_URL}/pro/:id`}>
-          Pro Page
-        </Button>
-        <Button
-          color="inherit"
-          activeClassName='active'
-          component={NavLink}
           to={`${process.env.PUBLIC_URL}/order`}>
           Order
         </Button>
